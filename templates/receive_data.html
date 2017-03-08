@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receive Data</title>
+</head>
+<body>
+<div class="container">
+      <h1>Input Data</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Road ID" name="roadid" value="{{
+          request.form.roadid }}"> <br>
+         <input type="text" placeholder="Direction" name="direction" value="{{
+          request.form.direction }}"> <br>
+        <input type="text" placeholder="Day of Week" name="dayofweek" value="{{
+          request.form.dayofweek }}"> <br>
+         <input type="text" placeholder="Time of Day" name="timeofday" value="{{
+          request.form.timeofday }}"> <br>
+        <input type="text" placeholder="Traffic Status" name="trafficstatus" value="{{
+          request.form.trafficstatus }}"> <br>
+        <input class="btn btn-default" type="submit" value="Insert">
+      </form>
+      {% if response %}
+        <p class="response"> {{ response }}
+      {% endif %}
+    <br><br>
+    </div>
+</body>
+</html>
